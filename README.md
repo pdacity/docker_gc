@@ -1,6 +1,7 @@
 # Garbage collector for Docker Swarm
 
-[![Build Status](https://cd.malinin.com/api/badges/DOCKER/docker_gc/status.svg)](https://cd.malinin.com/DOCKER/docker_gc)
+![Docker Automated build](https://img.shields.io/docker/automated/pdacity/docker_gc) 
+
 
 ## About 
 
