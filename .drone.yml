@@ -1,0 +1,34 @@
+kind: pipeline
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+trigger:
+  instance:
+    include:
+      - dev.malinin.com
+
+steps:
+- name: build
+  commands:
+    - /usr/local/bin/docker-compose build --compress --force-rm
+
+- name: start
+  commands:
+    - /usr/local/bin/docker-compose down --remove-orphans
+    - /usr/local/bin/docker-compose up -d --remove-orphans 
+
+- name: notify
+  image: appleboy/drone-telegram
+  settings:
+    token: ${TG_BOT_TOKEN}
+    to: ${TG_ID}
+    message: >
+    {{#success build.status}}
+      build {{build.number}} succeeded. Good job.
+    {{else}}
+      build {{build.number}} failed. Fix me please.
+     
+    

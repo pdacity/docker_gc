@@ -1,0 +1,19 @@
+version: '2.4'
+
+services:
+  docker_gc:
+    container_name: docker_gc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SLEEP: '30m'       # prune every 30m
+      AGE: '48h'         # prune older than 48h
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: always
+    cpu_shares: 50
+    mem_limit: 8m
+    memswap_limit: 8m
+
+
