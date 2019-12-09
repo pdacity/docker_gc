@@ -3,6 +3,7 @@
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/pdacity/docker_gc) 
 ![Docker stuff](https://img.shields.io/badge/%F0%9F%90%B3-useful%20stuff-lightgray) 
 ![PizzaWare](https://img.shields.io/badge/%F0%9F%8D%95-PizzaWare-orange) 
+![Tea powered](https://img.shields.io/badge/%F0%9F%8D%B5-tea%20powered-yellowgreen)
 
 ## About 
 
