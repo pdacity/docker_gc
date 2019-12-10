@@ -29,4 +29,5 @@
 
 ## GitHub
 
-![Prebuild docker image on hub.docker.com](https://hub.docker.com/r/pdacity/docker_gc)
+Prebuild docker image on hub.docker.com - https://hub.docker.com/r/pdacity/docker_gc
+
