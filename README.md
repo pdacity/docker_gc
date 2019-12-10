@@ -16,12 +16,17 @@
 
 ## Настройка 
 
-Для работы необходимо задать 2 параметра в yml файле:
+Для работы необходимо задать параметры yml файле:
+
 * AGE - срок в формате timestamp или Go duration strings (10m, 1h30m) после которого неиспользуемые ресурсы будут удалены
 * SLEEP - периодичность проверки в формате timestamp или Go duration strings (10m, 1h30m)
+* STICKY_LABEL = не удалять образа с этой меткой
 
 ## Запуск
 
 * docker-stack.yml - для деплоя сервиса в  Docker swarm
 * docker-compose.yml - для запуска Docker Service
 
+## GitHub
+
+![Prebuild docker image on hub.docker.com](https://hub.docker.com/r/pdacity/docker_gc)

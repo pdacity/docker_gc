@@ -9,6 +9,7 @@ services:
     environment:
       SLEEP: '30m'       # prune every 30m
       AGE: '48h'         # prune older than 48h
+      STICKY_LABEL: 'permanent=yes'
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     restart: always
