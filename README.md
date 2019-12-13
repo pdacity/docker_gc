@@ -22,6 +22,31 @@
 * SLEEP - периодичность проверки в формате timestamp или Go duration strings (10m, 1h30m)
 * STICKY_LABEL = не удалять образа с этой меткой
 
+### Сборка образа с `STICKY_LABEL`
+
+В случае ели необходимо защитить какой либо из образов от автоматического удаления необходимо добавить к образу  `label`, например `persistent_image=yes` Для этого создайте Dockerfile для образа <IMAGENAME>
+
+```yaml
+FROM <IMAGENAMENAME>
+LABEL persistent_image=yes
+```
+
+При запуске стека необходимо собрать образ из приведенного выше  Dockerfile
+
+docker-compose.yaml
+```yaml
+...
+  <SERVICENAME>
+    container_name: <CONTAINERNAME>
+    build:
+      context: .
+...
+
+```
+где <IMAGENAME> - название образа который должен быть защищен от автоматического удаления, <SERVICENAME> - название сервиса в стеке, <CONTAINERNAME> имя контейнера (опционально)
+
+И задайте `STICKY_LABEL: persistent_image=yes` в переменных зщапуска docker_gc
+
 ## Запуск
 
 * docker-stack.yml - для деплоя сервиса в  Docker swarm
