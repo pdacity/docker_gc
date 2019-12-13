@@ -27,7 +27,7 @@
 В случае ели необходимо защитить какой либо из образов от автоматического удаления необходимо добавить к образу  `label`, например `persistent_image=yes` Для этого создайте Dockerfile для образа <IMAGENAME>
 
 ```yaml
-FROM <IMAGENAMENAME>
+FROM <IMAGENAME>
 LABEL persistent_image=yes
 ```
 
