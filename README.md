@@ -42,9 +42,9 @@ docker-compose.yaml
 ...
 
 ```
-* <IMAGENAME> - the image which is protected from automatic deletion
-* <SERVICENAME> - service name in the stack
-* <CONTAINERNAME> - container name (optionally)
+* `<IMAGENAME>` - the image which is protected from automatic deletion
+* `<SERVICENAME>` - service name in the stack
+* `<CONTAINERNAME>` - container name (optionally)
 
 Also you should set `STICKY_LABEL: persisten_image=yes` in the docker_gc run variables
 
@@ -82,11 +82,11 @@ Prebuild docker image on hub.docker.com - https://hub.docker.com/r/pdacity/docke
 
 * AGE - срок в формате timestamp или Go duration strings (10m, 1h30m) после которого неиспользуемые ресурсы будут удалены
 * SLEEP - периодичность проверки в формате timestamp или Go duration strings (10m, 1h30m)
-* STICKY_LABEL = не удалять образа с этой меткой
+* STICKY_LABEL - не удалять образа с этой меткой
 
 ### Сборка образа с `STICKY_LABEL`
 
-В случае если необходимо защитить какой либо из образов от автоматического удаления необходимо добавить к образу  `label`, например `persistent_image=yes` Для этого создайте Dockerfile для образа <IMAGENAME>
+В случае если необходимо защитить какой либо из образов от автоматического удаления необходимо добавить к образу  `label`, например `persistent_image=yes` Для этого создайте Dockerfile для образа `<IMAGENAME>`
 
 ```yaml
 FROM <IMAGENAME>
@@ -105,9 +105,9 @@ docker-compose.yaml
 ...
 
 ```
-где <IMAGENAME> - название образа который должен быть защищен от автоматического удаления, <SERVICENAME> - название сервиса в стеке, <CONTAINERNAME> имя контейнера (опционально)
+где `<IMAGENAME>` - название образа который должен быть защищен от автоматического удаления, `<SERVICENAME>` - название сервиса в стеке, `<CONTAINERNAME>` имя контейнера (опционально)
 
-И задайте `STICKY_LABEL: persistent_image=yes` в переменных зщапуска docker_gc
+И задайте `STICKY_LABEL: persistent_image=yes` в переменных запуска docker_gc
 
 ## Запуск
 
