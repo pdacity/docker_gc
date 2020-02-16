@@ -23,11 +23,11 @@ Set config parameters in the yml file:
 
 ### Building image with `STICKY_LABEL`
 
-If you need to protect an image from automatic deletion use LABEL directive, for example: `persistent_image=yes`. To do it just create Dockerfile for you image <IMAGENAME>.
+If you need to protect an image from automatic deletion use LABEL directive, for example: `persistent_image=true`. To do it just create Dockerfile for you image <IMAGENAME>.
 
 ```yaml
 FROM <IMAGENAME>
-LABEL persistent_image=yes
+LABEL persistent_image=true
 ```
 
 Before run the stack build the image from Dockerfile mentioned above:
@@ -46,7 +46,7 @@ docker-compose.yaml
 * `<SERVICENAME>` - service name in the stack
 * `<CONTAINERNAME>` - container name (optionally)
 
-Also you should set `STICKY_LABEL: persisten_image=yes` in the docker_gc run variables
+Also you should set `STICKY_LABEL: persisten_image=true` in the docker_gc run variables
 
 ## Run
 
@@ -86,11 +86,11 @@ Prebuild docker image on hub.docker.com - https://hub.docker.com/r/pdacity/docke
 
 ### Сборка образа с `STICKY_LABEL`
 
-В случае если необходимо защитить какой либо из образов от автоматического удаления необходимо добавить к образу  `label`, например `persistent_image=yes` Для этого создайте Dockerfile для образа `<IMAGENAME>`
+В случае если необходимо защитить какой либо из образов от автоматического удаления необходимо добавить к образу  `label`, например `persistent_image=true` Для этого создайте Dockerfile для образа `<IMAGENAME>`
 
 ```yaml
 FROM <IMAGENAME>
-LABEL persistent_image=yes
+LABEL persistent_image=true
 ```
 
 При запуске стека необходимо собрать образ из приведенного выше  Dockerfile
@@ -107,7 +107,7 @@ docker-compose.yaml
 ```
 где `<IMAGENAME>` - название образа который должен быть защищен от автоматического удаления, `<SERVICENAME>` - название сервиса в стеке, `<CONTAINERNAME>` имя контейнера (опционально)
 
-И задайте `STICKY_LABEL: persistent_image=yes` в переменных запуска docker_gc
+И задайте `STICKY_LABEL: persistent_image=true` в переменных запуска docker_gc
 
 ## Запуск
 
