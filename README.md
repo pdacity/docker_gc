@@ -114,7 +114,7 @@ docker-compose.yaml
 * docker-stack.yml - для деплоя сервиса в  Docker swarm
 * docker-compose.yml - для запуска Docker Service
 
-## GitHub
+## Docker Hub
 
 Prebuild docker image on hub.docker.com - https://hub.docker.com/r/pdacity/docker_gc
 
