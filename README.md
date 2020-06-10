@@ -53,7 +53,7 @@ Also you should set `STICKY_LABEL: persisten_image=true` in the docker_gc run va
 * docker-stack.yml - to deploy the service in Docker Swarm
 * docker-compose.yml - to run just a Docker Service
 
-## GitHub
+## Docker Hub
 
 Prebuild docker image on hub.docker.com - https://hub.docker.com/r/pdacity/docker_gc
 
@@ -116,7 +116,7 @@ docker-compose.yaml
 
 ## Docker Hub
 
-Prebuild docker image on hub.docker.com - https://hub.docker.com/r/pdacity/docker_gc
+Готовый собранный образ на hub.docker.com - https://hub.docker.com/r/pdacity/docker_gc
 
 
 --- 
