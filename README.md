@@ -7,7 +7,7 @@
 
 ## About 
 
-Image for automatic removing unused Docker Swarm objects. Alos works just as Docker Service.
+Image for automatic removing unused Docker Swarm objects. Also works just as Docker Service.
 
 By default these types of objects are deleted:
 - container
