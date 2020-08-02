@@ -1,5 +1,6 @@
 # Garbage collector for Docker Swarm
 
+![Awesome Docker](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/pdacity/docker_gc)
 ![Docker stuff](https://img.shields.io/badge/%F0%9F%90%B3-useful%20stuff-lightgray)
 ![PizzaWare](https://img.shields.io/badge/%F0%9F%8D%95-PizzaWare-orange)
