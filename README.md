@@ -119,6 +119,9 @@ docker-compose.yaml
 
 Готовый собранный образ на hub.docker.com - https://hub.docker.com/r/pdacity/docker_gc
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=pdacity/docker_gc&type=Timeline)](https://star-history.com/#pdacity/docker_gc&Timeline)
 
 --- 
 
